@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Kids Fable'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://127.0.0.1:8000/'),
 
     'asset_url' => env('ASSET_URL', null),
 
@@ -161,6 +161,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+        Jorenvh\Share\Providers\ShareServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -215,7 +218,6 @@ return [
         'Notification' => Illuminate\Support\Facades\Notification::class,
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
-        'RateLimiter' => Illuminate\Support\Facades\RateLimiter::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
         // 'Redis' => Illuminate\Support\Facades\Redis::class,
         'Request' => Illuminate\Support\Facades\Request::class,
@@ -228,7 +230,18 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+        'Share' => Jorenvh\Share\ShareFacade::class,
 
     ],
+
+// 'FACEBOOK_CLIENT_ID'=>'602363444113716',
+// 'FACEBOOK_CLIEpayment-listNT_SECRET'=>'f0dec6a939701139517196a3e8fecbdf',
+// 'FACEBOOK_URL'=>'https://kidsfable.com/login/facebook/callback',
+
+// 'GOOGLE_CLIENT_ID'=>'307434463098-p6atd84ol1po9uv133bfetjhc9jeu9ju.apps.googleusercontent.com',
+// 'GOOGLE_CLIENT_SECRET'=>'W-Z-ZmsWinRMJdSPBTmHXCBN',
+// 'GOOGLE_URL'=>'https://kidsfable.com/login/google/callback',
 
 ];

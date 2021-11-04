@@ -1,15 +1,20 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
 /node_modules
 /public/hot
 /public/storage
+/resource/views/layouts/frontend_wrapper2.blade.php
 /storage/*.key
 /vendor
+/vendor/composer
+/vendor/autoload.php
+/vendor/composer/autoload_classmap.php
+/vendor/composer/autoload_real.php
+/vendor/composer/autoload_static.php
 .env
 .env.backup
 .phpunit.result.cache
-docker-compose.override.yml
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/.idea
-/.vscode

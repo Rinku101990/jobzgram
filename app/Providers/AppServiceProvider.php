@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\Program;
+use App\Models\Category;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('*', function($view) {
+            //$programList = Program::where('status','active')->get();
+            $categoryList = Category::where('status','active')->get();
+            $view->with(['categoryList' =>$categoryList]);
+        });
     }
 }
