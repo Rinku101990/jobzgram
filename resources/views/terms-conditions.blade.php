@@ -1,23 +1,40 @@
 @extends('include.layout')
 @section('content')
 
+<!-- TNC Section -->
+<section class="tnc-section" style="padding: 180px 0 50px !important;">
+   <div class="auto-container">
+      <div class="sec-title text-center">
+            <h2>Terms and Conditions</h2>
+            <div class="text">Home / Terms and Conditions</div>
+      </div>
 
-<!-- Start of breadcrumb section
-   ============================================= -->
-   <section id="yl-breadcrumb" class="yl-breadcrumb-section position-relative" style="padding: 0">
-            
-            <img src="{{url('storage/page/'.$page->banner)}}" title=" {!! $page->title !!}" style="width: 100%">
-          </section>
+      <div class="text-box">        
+            <h3>1. Terms</h3>
+            <p>Pharetra nulla ullamcorper sit lectus. Fermentum mauris pellentesque nec nibh sed et, vel diam, massa. Placerat quis vel fames interdum urna lobortis sagittis sed pretium. Aliquam eget posuere sit enim elementum nulla vulputate magna. Morbi sed arcu proin quis tortor non risus. </p>
+            <p>Elementum lectus a porta commodo suspendisse arcu, aliquam lectus faucibus. Nisl malesuada tortor, ligula aliquet felis vitae enim. Mi augue aliquet mauris non elementum tincidunt eget facilisi. Pellentesque massa ipsum tempus vel aliquam massa eu pulvinar eget. </p>
+      </div>
 
-<!-- End of breadcrumb section
-   ============================================= -->
-<!-- Start of about us  section
-   ============================================= -->   
-<section id="about-page-about" class="about-page-about-section">
-   <div class="container">
-      {!! $page->description !!}
+      <div class="text-box">        
+            <h3>2. Limitations</h3>
+            <p>Pharetra nulla ullamcorper sit lectus. Fermentum mauris pellentesque nec nibh sed et, vel diam, massa. Placerat quis vel fames interdum urna lobortis sagittis sed pretium. Aliquam eget posuere sit enim elementum nulla vulputate magna. Morbi sed arcu proin quis tortor non risus. </p>
+            <p>Elementum lectus a porta commodo suspendisse arcu, aliquam lectus faucibus. Nisl malesuada tortor, ligula aliquet felis vitae enim. Mi augue aliquet mauris non elementum tincidunt eget facilisi. Pellentesque massa ipsum tempus vel aliquam massa eu pulvinar eget. </p>
+      </div>
+
+
+      <div class="text-box">        
+            <h3>3. Revisions and Errata</h3>
+            <p>Pharetra nulla ullamcorper sit lectus. Fermentum mauris pellentesque nec nibh sed et, vel diam, massa. Placerat quis vel fames interdum urna lobortis sagittis sed pretium. Aliquam eget posuere sit enim elementum nulla vulputate magna. Morbi sed arcu proin quis tortor non risus. </p>
+            <p>Elementum lectus a porta commodo suspendisse arcu, aliquam lectus faucibus. Nisl malesuada tortor, ligula aliquet felis vitae enim. Mi augue aliquet mauris non elementum tincidunt eget facilisi. Pellentesque massa ipsum tempus vel aliquam massa eu pulvinar eget. </p>
+      </div>
+
+      <div class="text-box">        
+            <h3>4. Site Terms of Use Modifications</h3>
+            <p>Pharetra nulla ullamcorper sit lectus. Fermentum mauris pellentesque nec nibh sed et, vel diam, massa. Placerat quis vel fames interdum urna lobortis sagittis sed pretium. Aliquam eget posuere sit enim elementum nulla vulputate magna. Morbi sed arcu proin quis tortor non risus. </p>
+            <p>Elementum lectus a porta commodo suspendisse arcu, aliquam lectus faucibus. Nisl malesuada tortor, ligula aliquet felis vitae enim. Mi augue aliquet mauris non elementum tincidunt eget facilisi. Pellentesque massa ipsum tempus vel aliquam massa eu pulvinar eget. </p>
+      </div>
    </div>
 </section>
-<!-- End of about us  section
-   ============================================= -->
+<!-- End TNC Section -->
+
 @endsection

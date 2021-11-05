@@ -45,13 +45,18 @@ class PageController extends Controller
     // Home Page 
     public function index()
     {   
-        $testimonial = Testimonial::where('status','active')->orderBy('id','desc')->get();
-        $banner = Banner::where('status','active')->orderBy('id','desc')->get();
-        $course = Course::where('status','active')->orderBy('id','desc')->get(); 
-        $blog = Blog::where('status','active')->limit(3)->orderBy('id','desc')->get(); 
-        $counsellor = User::where('status','active')->where('registerAs','child_counsellor')->limit(4)->orderBy('id','desc')->get();
-        $program = Program::select('title','title_slug','banner','age_group','fees','short_description','status')->where('status','active')->limit(4)->orderBy('id','asc')->get(); 
-        return view('index',compact('banner','testimonial','course','blog','counsellor','program'));
+        return view('index');
+    }
+
+    /*--- Login Register ---*/
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function register()
+    {
+        return view('register');
     }
 
     // About US 
@@ -61,12 +66,6 @@ class PageController extends Controller
         return view('about',compact('page'));
     }
 
-    public function landingpage()
-    {   
-        return view('craftingmylife');
-    }
-
-    // Who We Are 
     public function who_we_are()
     {
         $page = Page::find(2);
@@ -80,6 +79,21 @@ class PageController extends Controller
         return view('what_we_do',compact('page'));
     }
 
+    public function terms()
+    {
+        //$page = Page::find(7);
+        return view('terms-conditions');
+    }
+  
+    public function privacy_policy()
+    {
+        $page = Page::find(8);
+        return view('privacy-policy',compact('page'));
+    }
+
+    
+    /*-- OLD --*/ 
+
     
     public function fablian_family()
     {   
@@ -88,17 +102,7 @@ class PageController extends Controller
     }
 
      
-    public function terms()
-    {
-        $page = Page::find(7);
-        return view('terms-conditions',compact('page'));
-    }
-  
-    public function privacy_policy()
-    {
-        $page = Page::find(8);
-        return view('privacy-policy',compact('page'));
-    }
+    
   
 
     public function parenting_solutions()
@@ -1098,10 +1102,7 @@ class PageController extends Controller
         return redirect('contact-us');
     }
 
-    public function student()
-    {
-        return view('login');
-    }
+    
 
     public function teacher()
     {

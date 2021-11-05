@@ -19,101 +19,103 @@ use App\Http\Controllers\PageController;
 
 Route::get('/', 'PageController@index')->name('index');
 
-Route::get('about-us', 'PageController@about')->name('about');
-/*--- For Landing Page ---*/ 
-Route::get('craftingmylife.com', 'PageController@landingpage')->name('landingpage');
-/*--- For Landing Page ---*/ 
-Route::get('who-we-are', 'PageController@who_we_are')->name('who_we_are');
-Route::get('what-we-do', 'PageController@what_we_do')->name('what_we_do');
-Route::get('fablian-family', 'PageController@fablian_family')->name('fablian_family');
-Route::get('parenting-solutions', 'PageController@parenting_solutions')->name('parenting_solutions');
-Route::get('program', 'PageController@program')->name('program');
-Route::get('program/{id}', 'PageController@program_data')->name('program_data');
+// Route::get('about-us', 'PageController@about')->name('about');
+// /*--- For Landing Page ---*/ 
+// Route::get('craftingmylife.com', 'PageController@landingpage')->name('landingpage');
+// /*--- For Landing Page ---*/ 
+// Route::get('who-we-are', 'PageController@who_we_are')->name('who_we_are');
+// Route::get('what-we-do', 'PageController@what_we_do')->name('what_we_do');
+// Route::get('fablian-family', 'PageController@fablian_family')->name('fablian_family');
+// Route::get('parenting-solutions', 'PageController@parenting_solutions')->name('parenting_solutions');
+// Route::get('program', 'PageController@program')->name('program');
+// Route::get('program/{id}', 'PageController@program_data')->name('program_data');
 
-Route::get('program-detail/{id}', 'PageController@program_detail')->name('program_detail');
-Route::get('program-book-for-demo/{id}', 'PageController@program_book_for_demo')->name('program_book_for_demo'); // Free Payment
-Route::post('live_demo_update','PageController@live_demo_update')->name('live_demo_updat');
-Route::get('enroll-for-program/{id}', 'PageController@enroll_for_program')->name('enroll_for_program'); // Gateway Payment
+// Route::get('program-detail/{id}', 'PageController@program_detail')->name('program_detail');
+// Route::get('program-book-for-demo/{id}', 'PageController@program_book_for_demo')->name('program_book_for_demo'); // Free Payment
+// Route::post('live_demo_update','PageController@live_demo_update')->name('live_demo_updat');
+// Route::get('enroll-for-program/{id}', 'PageController@enroll_for_program')->name('enroll_for_program'); // Gateway Payment
 
-Route::get('makepayment/{id}', 'PageController@makepayment')->name('makepayment');
-Route::post('thankyou', [RazorpayPaymentController::class, 'store'])->name('razorpay.payment.store');
-Route::get('thankyou', [RazorpayPaymentController::class, 'program_success'])->name('razorpay.payment.program_success');
+// Route::get('makepayment/{id}', 'PageController@makepayment')->name('makepayment');
+// Route::post('thankyou', [RazorpayPaymentController::class, 'store'])->name('razorpay.payment.store');
+// Route::get('thankyou', [RazorpayPaymentController::class, 'program_success'])->name('razorpay.payment.program_success');
 
-Route::get('crafting-my-live', 'PageController@crafting_my_live')->name('crafting_my_live');
-Route::get('leader-in-me', 'PageController@leader_in_me')->name('leader_in_me');
+// Route::get('crafting-my-live', 'PageController@crafting_my_live')->name('crafting_my_live');
+// Route::get('leader-in-me', 'PageController@leader_in_me')->name('leader_in_me');
 
-//Route::get('live-demo', 'PageController@live_demo')->name('live_demo');
-//Route::post('live_demo_update','PageController@live_demo_update')->name('live_demo_update');	
+// //Route::get('live-demo', 'PageController@live_demo')->name('live_demo');
+// //Route::post('live_demo_update','PageController@live_demo_update')->name('live_demo_update');	
 
-//Route::get('live-for-program', 'PageController@live_for_program')->name('live_for_program');
-Route::get('child-counsellor', 'PageController@child_counsellor')->name('child_counsellor');
-Route::get('counsellor-slot', 'PageController@counsellor_slot')->name('counsellor_slot');
-Route::get('slot-booking', 'PageController@slot_booking')->name('slot_booking');
-Route::post('booking_slot', 'PageController@booking_slot')->name('booking_slot');
-Route::get('booking-thank', 'PageController@booking_thank')->name('booking_thank');
-Route::get('about-counselling-service', 'PageController@about_counselling_service')->name('about_counselling_service');
+// //Route::get('live-for-program', 'PageController@live_for_program')->name('live_for_program');
+// Route::get('child-counsellor', 'PageController@child_counsellor')->name('child_counsellor');
+// Route::get('counsellor-slot', 'PageController@counsellor_slot')->name('counsellor_slot');
+// Route::get('slot-booking', 'PageController@slot_booking')->name('slot_booking');
+// Route::post('booking_slot', 'PageController@booking_slot')->name('booking_slot');
+// Route::get('booking-thank', 'PageController@booking_thank')->name('booking_thank');
+// Route::get('about-counselling-service', 'PageController@about_counselling_service')->name('about_counselling_service');
 
-// Route::get('parenting-forum', 'PageController@parenting_forum')->name('parenting_forum');
-Route::get('about-parenting-forum', 'PageController@about_parenting_forum')->name('about_parenting_forum');
-Route::get('about-kids-wellness-services', 'PageController@about_kids_wellness_services')->name('about_kids_wellness_services');
-Route::get('about-our-program', 'PageController@about_our_program')->name('about_our_program');
+// // Route::get('parenting-forum', 'PageController@parenting_forum')->name('parenting_forum');
+// Route::get('about-parenting-forum', 'PageController@about_parenting_forum')->name('about_parenting_forum');
+// Route::get('about-kids-wellness-services', 'PageController@about_kids_wellness_services')->name('about_kids_wellness_services');
+// Route::get('about-our-program', 'PageController@about_our_program')->name('about_our_program');
 
-Route::get('kids-wellness-services', 'PageController@kids_wellness_services')->name('kids_wellness_services');
-Route::get('counsellors-and-coaches', 'PageController@counsellors_and_coaches')->name('counsellors_and_coaches');
+// Route::get('kids-wellness-services', 'PageController@kids_wellness_services')->name('kids_wellness_services');
+// Route::get('counsellors-and-coaches', 'PageController@counsellors_and_coaches')->name('counsellors_and_coaches');
 
-Route::get('courses', 'PageController@courses')->name('courses');
-Route::get('course-details/{id}', 'PageController@courses_details')->name('courses_details');
-Route::post('course_attend', 'PageController@course_attend')->name('course_attend');
-Route::get('course-payment-confirmation/{id}', 'PageController@course_payment_confirmation')->name('course_payment_confirmation');
-Route::post('course-thankyou', [RazorpayPaymentController::class, 'saveCourse'])->name('razorpay.payment.saveCourse');
-Route::get('course-thankyou', [RazorpayPaymentController::class, 'success'])->name('razorpay.payment.success');
-
-
-Route::get('blog', 'PageController@blog')->name('blog');
-Route::get('blog/{id}', 'PageController@blog_details')->name('blog_details');
-Route::get('blog-edit/{id}', 'PageController@blog_edit')->name('blog_edit');
-Route::post('blog_update', 'PageController@blog_update')->name('blog_update');
-Route::post('blog-delete', 'PageController@blog_delete')->name('blog_delete');
-
-Route::post('blog_comment', 'PageController@blog_comment')->name('blog_comment');
-Route::post('blog_save', 'PageController@blog_save')->name('blog_save');
-
-Route::post('blike-save', 'PageController@blike')->name('blike');
-Route::post('blike-delete', 'PageController@blike_delete')->name('blike_delete');
-
-Route::post('favourite-save', 'PageController@favourite')->name('favourite');
-Route::post('favourite-delete', 'PageController@favourite_delete')->name('favourite_delete');
-
-Route::post('follow-save', 'PageController@follow')->name('follow');
-Route::post('follow-delete', 'PageController@follow_delete')->name('follow_delete');
-
-Route::post('fav-webinar', 'PageController@fav_webinar')->name('fav_webinar');
-Route::post('fav-webinar-delete', 'PageController@fav_webinar_delete')->name('fav_webinar_delete');
-
-Route::get('parenting-tips', 'PageController@parenting_tips')->name('parenting_tips');
-Route::post('parenting_tip_save', 'PageController@parenting_tip_save')->name('parenting_tip_save');
-Route::post('parenting_tip_reply', 'PageController@parenting_tip_reply')->name('parenting_tip_reply');
-Route::get('parenting-webinars', 'PageController@parenting_webinars')->name('parenting_webinars');
-Route::get('parenting-webinars/{id}', 'PageController@webinar_details')->name('webinar_details');
-Route::post('webinar_attent', 'PageController@webinar_attent')->name('webinar_attent');
-
-Route::get('webinar-payment-confirmation/{id}', 'PageController@webinar_payment_confirmation')->name('webinar_payment_confirmation');
-Route::post('webinar-thankyou', [RazorpayPaymentController::class, 'save'])->name('razorpay.payment.save');
-Route::get('webinar-thankyou', [RazorpayPaymentController::class, 'success'])->name('razorpay.payment.success');
-
-Route::post('webinar_save', 'PageController@webinar_save')->name('webinar_save');
-
-Route::get('contact-us', 'PageController@contact')->name('contact');
+// Route::get('courses', 'PageController@courses')->name('courses');
+// Route::get('course-details/{id}', 'PageController@courses_details')->name('courses_details');
+// Route::post('course_attend', 'PageController@course_attend')->name('course_attend');
+// Route::get('course-payment-confirmation/{id}', 'PageController@course_payment_confirmation')->name('course_payment_confirmation');
+// Route::post('course-thankyou', [RazorpayPaymentController::class, 'saveCourse'])->name('razorpay.payment.saveCourse');
+// Route::get('course-thankyou', [RazorpayPaymentController::class, 'success'])->name('razorpay.payment.success');
 
 
+// Route::get('blog', 'PageController@blog')->name('blog');
+// Route::get('blog/{id}', 'PageController@blog_details')->name('blog_details');
+// Route::get('blog-edit/{id}', 'PageController@blog_edit')->name('blog_edit');
+// Route::post('blog_update', 'PageController@blog_update')->name('blog_update');
+// Route::post('blog-delete', 'PageController@blog_delete')->name('blog_delete');
+
+// Route::post('blog_comment', 'PageController@blog_comment')->name('blog_comment');
+// Route::post('blog_save', 'PageController@blog_save')->name('blog_save');
+
+// Route::post('blike-save', 'PageController@blike')->name('blike');
+// Route::post('blike-delete', 'PageController@blike_delete')->name('blike_delete');
+
+// Route::post('favourite-save', 'PageController@favourite')->name('favourite');
+// Route::post('favourite-delete', 'PageController@favourite_delete')->name('favourite_delete');
+
+// Route::post('follow-save', 'PageController@follow')->name('follow');
+// Route::post('follow-delete', 'PageController@follow_delete')->name('follow_delete');
+
+// Route::post('fav-webinar', 'PageController@fav_webinar')->name('fav_webinar');
+// Route::post('fav-webinar-delete', 'PageController@fav_webinar_delete')->name('fav_webinar_delete');
+
+// Route::get('parenting-tips', 'PageController@parenting_tips')->name('parenting_tips');
+// Route::post('parenting_tip_save', 'PageController@parenting_tip_save')->name('parenting_tip_save');
+// Route::post('parenting_tip_reply', 'PageController@parenting_tip_reply')->name('parenting_tip_reply');
+// Route::get('parenting-webinars', 'PageController@parenting_webinars')->name('parenting_webinars');
+// Route::get('parenting-webinars/{id}', 'PageController@webinar_details')->name('webinar_details');
+// Route::post('webinar_attent', 'PageController@webinar_attent')->name('webinar_attent');
+
+// Route::get('webinar-payment-confirmation/{id}', 'PageController@webinar_payment_confirmation')->name('webinar_payment_confirmation');
+// Route::post('webinar-thankyou', [RazorpayPaymentController::class, 'save'])->name('razorpay.payment.save');
+// Route::get('webinar-thankyou', [RazorpayPaymentController::class, 'success'])->name('razorpay.payment.success');
+
+// Route::post('webinar_save', 'PageController@webinar_save')->name('webinar_save');
+
+// Route::get('contact-us', 'PageController@contact')->name('contact');
+
+
+// Route::get('terms-conditions', 'PageController@terms')->name('terms');
+// Route::get('privacy-policy', 'PageController@privacy_policy')->name('privacy_policy');
+// Route::get('teacher', 'PageController@teacher')->name('teacher');
+// Route::get('service', 'PageController@service')->name('service');
+// Route::get('faqs', 'PageController@faqs')->name('faqs');
+// Route::get('account', 'PageController@account')->name('account');
 Route::get('terms-conditions', 'PageController@terms')->name('terms');
-Route::get('privacy-policy', 'PageController@privacy_policy')->name('privacy_policy');
-Route::get('teacher', 'PageController@teacher')->name('teacher');
-Route::get('service', 'PageController@service')->name('service');
-Route::get('faqs', 'PageController@faqs')->name('faqs');
-Route::get('account', 'PageController@account')->name('account');
 
-Route::get('login-register', 'PageController@student')->name('login-register');
+Route::get('login-page', 'PageController@login')->name('login-page');
+Route::get('register-page', 'PageController@register')->name('register-page');
 Auth::routes();
 Auth::routes(['verify' => true]);
 
@@ -139,7 +141,9 @@ Route::post('/email/verification-notification', function (Request $request) {
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 
-
+Route::post('profile_update','StudentController@profile_update')->name('profile_update');
+Route::get('change-password', 'StudentController@change_password')->name('change_password');
+Route::post('update-password', 'StudentController@UpdatePassword');	
 
 
 
@@ -183,9 +187,8 @@ Route::get('study-materials', 'StudentController@study_materials')->name('study_
 Route::get('study-materials/{id}','StudentController@study_view')->name('study_view');
 Route::post('teacher-observation', 'StudentController@teacher_observation');
 Route::post('student-document', 'StudentController@student_document');
-Route::get('change-password', 'StudentController@change_password')->name('change_password');
-Route::post('profile_update','StudentController@profile_update')->name('profile_update');	
-Route::post('update-password', 'StudentController@UpdatePassword');
+
+
 
 Route::get('payment-list', 'StudentController@payment')->name('payment');
 Route::get('wallet', 'StudentController@student_wallet')->name('student_wallet');
