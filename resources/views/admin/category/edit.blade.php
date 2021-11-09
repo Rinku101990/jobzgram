@@ -4,17 +4,17 @@
 <!-- [ content ] Start -->
 <!-- [ content ] Start -->
 <div class="container-fluid flex-grow-1 container-p-y">
-        <h4 class="font-weight-bold py-3 mb-0">Edit Category</h4>
+        <h4 class="font-weight-bold py-3 mb-0">Edit Country</h4>
         <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}"><i class="feather icon-home"></i></a></li>
-                <li class="breadcrumb-item">Category</li>
-                <li class="breadcrumb-item active">Edit Category</li>
+                <li class="breadcrumb-item">Country</li>
+                <li class="breadcrumb-item active">Edit Country</li>
             </ol>
         </div>
 
         <div class="card mb-4">
-            <h6 class="card-header bg-dark text-white">Update Category</h6>
+            <h6 class="card-header bg-dark text-white">Update Country</h6>
             <div class="card-body">
 
                 {{ Form::open(array('url' => route('category.update',$category->id),'enctype'=>'multipart/form-data','method'=>'put')) }}

@@ -14,7 +14,7 @@
                </div>
                <!-- Job Search Form -->
                <div class="job-search-form">
-                  <form method="post" action="#">
+                  <form action="{{ url('login-page') }}">
                      <div class="row">
                         <div class="form-group col-lg-9 col-md-12 col-sm-12">
                            <span class="icon flaticon-search-1"></span>
@@ -32,13 +32,13 @@
                <!-- Popular Search -->
                <div class="popular-searches">
                   <span class="title">Popular Searches : </span>
-                  <a href="#">Designer</a>, 
-                  <a href="#">Developer</a>, 
-                  <a href="#">Web</a>, 
-                  <a href="#">IOS</a>,
-                  <a href="#">PHP</a>,
-                  <a href="#">Senior</a>,
-                  <a href="#">Engineer</a>,
+                  <a href="{{ url('login-page') }}">Designer</a>, 
+                  <a href="{{ url('login-page') }}">Developer</a>, 
+                  <a href="{{ url('login-page') }}">Web</a>, 
+                  <a href="{{ url('login-page') }}">IOS</a>,
+                  <a href="{{ url('login-page') }}">PHP</a>,
+                  <a href="{{ url('login-page') }}">Senior</a>,
+                  <a href="{{ url('login-page') }}">Engineer</a>,
                </div>
                <!-- End Popular Search -->
                <div class="bottom-box">
@@ -46,7 +46,7 @@
                      <span class="title">10k+ Candidates</span>
                      <img src="{{ asset('assets/images/resource/multi-peoples.png') }}" alt="">
                   </div>
-                  <a href="#" class="upload-cv"><span class="icon flaticon-file"></span> Upload your CV</a>
+                  <a href="{{ url('login-page') }}" class="upload-cv"><span class="icon flaticon-file"></span> Upload your CV</a>
                </div>
             </div>
          </div>
@@ -70,23 +70,23 @@
 </section>
 <!-- End Work Section -->
 <!-- Call To Action Two -->
-<section class="call-to-action-two" style="background-image: url({{ asset('assets/images/background/1.jpg') }});">
+<section class="call-to-action-two" style="background-image: url({{ asset('assets/images/background/1.jpg') }});padding: 61px 0 0px !important;" >
    <div class="auto-container wow fadeInUp">
       <div class="row">
          <div class="col-md-8 text-left">
-            <h2 style="color: #fff;">Let us un-pause your Career Break?</h2>
+            <h2 style="color: #fff;">Let us un-pause your career break?</h2>
             <br>
-            <h3 style="color: #fff;">Breathe, Refresh, Restart with our New Career Opportunities!</h3>
+            <h3 style="color: #fff;">Breathe, Refresh, Restart with our new career opportunities!</h3>
             <br>
             <h1 style="color: #fff;">#RESTARTWITHJOBZGRAM</h1>
             <br>&nbsp;
             <div class="btn-box">
-               <a href="#" class="theme-btn btn-style-two">Explore Opportunities.</a>
+               <a href="{{ url('login-page') }}" style="background-color:#E9A000" class="theme-btn btn-style-two">Explore Opportunities.</a>
             </div>
          </div>
          <div class="col-md-4">
             <div class="image-box">
-               <figure class="main-image anm"  data-wow-delay="1000ms" data-speed-x="2" data-speed-y="2"><img src="{{ asset('assets/img/Girl.png') }}" alt="" style="margin-top: -50px;"></figure>
+               <figure class="main-image anm"  data-wow-delay="1000ms" data-speed-x="2" data-speed-y="2"><img src="{{ asset('assets/img/girls.png') }}" alt="" style="margin-top: -50px;"></figure>
             </div>
          </div>
       </div>
@@ -102,54 +102,32 @@
       <div class="carousel-outer wow fadeInUp">
          <div class="candidates-carousel owl-carousel owl-theme default-dots">
             <!-- Candidate Block -->
+            @forelse($jobs as $jobsList)
             <div class="candidate-block">
                <div class="inner-box">
-                  <figure class="image" style="width:100%;height:auto;border-radius: 0;"><img src="{{ asset('assets/images/jobss.jpg') }}" alt=""></figure>
-                  <h4 class="name">Information Technology</h4>
+                  @foreach($country as $cntry)
+                  @if($cntry->id==$jobsList->cate_id)
+                  <figure class="image" style="width:100%;height:auto;border-radius: 0;">
+                     @if(Storage::disk('public')->exists('/category/'.$cntry->img) && $cntry->img !='')
+                        <img src="{{ url('/storage/category/').'/'.$cntry->img}}" alt="{{$cntry->title}}" style="width:236px;height:118px">
+                     @else
+                        <img src="{{ asset('assets/images/jobss.jpg') }}" alt="{{$cntry->title}}" style="width:236px;height:118px">
+                     @endif
+                  </figure>
+                  <h4 class="name">{{$jobsList->title}}</h4>
                   <span class="designation">190,000 Jobs</span>
-                  <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Canada</span></a>
+                        @guest
+                           <a href="{{ url('login-page') }}" class="theme-btn btn-style-one"><span class="btn-title">{{$cntry->title}}</span></a>
+                        @else
+                           <a href="{{ url('/') }}" class="theme-btn btn-style-one"><span class="btn-title">{{$cntry->title}}</span></a>
+                        @endguest
+                     @endif
+                  @endforeach
                </div>
             </div>
-            <div class="candidate-block">
-               <div class="inner-box">
-                  <figure class="image" style="width:100%;height:auto;border-radius: 0;"><img src="{{ asset('assets/images/jobss.jpg') }}" alt=""></figure>
-                  <h4 class="name">Information Technology</h4>
-                  <span class="designation">190,000 Jobs</span>
-                  <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Canada</span></a>
-               </div>
-            </div>
-            <div class="candidate-block">
-               <div class="inner-box">
-                  <figure class="image" style="width:100%;height:auto;border-radius: 0;"><img src="{{ asset('assets/images/jobss.jpg') }}" alt=""></figure>
-                  <h4 class="name">Information Technology</h4>
-                  <span class="designation">190,000 Jobs</span>
-                  <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Canada</span></a>
-               </div>
-            </div>
-            <div class="candidate-block">
-               <div class="inner-box">
-                  <figure class="image" style="width:100%;height:auto;border-radius: 0;"><img src="{{ asset('assets/images/jobss.jpg') }}" alt=""></figure>
-                  <h4 class="name">Information Technology</h4>
-                  <span class="designation">190,000 Jobs</span>
-                  <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Canada</span></a>
-               </div>
-            </div>
-            <div class="candidate-block">
-               <div class="inner-box">
-                  <figure class="image" style="width:100%;height:auto;border-radius: 0;"><img src="{{ asset('assets/images/jobss.jpg') }}" alt=""></figure>
-                  <h4 class="name">Information Technology</h4>
-                  <span class="designation">190,000 Jobs</span>
-                  <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Canada</span></a>
-               </div>
-            </div>
-            <div class="candidate-block">
-               <div class="inner-box">
-                  <figure class="image" style="width:100%;height:auto;border-radius: 0;"><img src="{{ asset('assets/images/jobss.jpg') }}" alt=""></figure>
-                  <h4 class="name">Information Technology</h4>
-                  <span class="designation">190,000 Jobs</span>
-                  <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Canada</span></a>
-               </div>
-            </div>
+            @empty
+            <center><p>no job list found!</p></center>
+            @endforelse
          </div>
       </div>
    </div>
@@ -211,12 +189,12 @@
             <h2 style="color: #fff;">Fastrack your job search with our premium services</h2>
             <br>
             <div class="text-box">
-               <p style="color:#fff"><i class="fa fa-check" style="color:green"></i> Enhance Profile &nbsp; <i class="fa fa-check" style="color:green"></i> 10 times higher visibility to recruiters</p>
+               <p style="color:#fff"><i class="fa fa-check" style="color:#fd7400"></i> Enhance Profile &nbsp; <i class="fa fa-check" style="color:#fd7400"></i> 10 times higher visibility to recruiters</p>
             </div>
          </div>
          <div class="col-md-4">
             <div class="image-box">
-               <figure class="main-image anm"  data-wow-delay="1000ms" data-speed-x="2" data-speed-y="2"><img src="{{ asset('assets/images/premium.png') }}" alt="" ></figure>
+               <figure class="main-image anm"  data-wow-delay="1000ms" data-speed-x="2" data-speed-y="2"><img src="{{ asset('assets/img/jpremium.png') }}" alt="" ></figure>
             </div>
          </div>
       </div>
@@ -238,7 +216,7 @@
                   <p>Create the perfect Resumé for Recruiters to spot you 10 x Faster! </p>
                   <span class="company-logo"><img src="{{ asset('assets/images/resume.png') }}" alt=""></span>
                   <div class="btn-box text-left">
-                     <a href="#" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Get Expert Help</span></a>
+                     <a href="{{ url('login-page') }}" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Get Expert Help</span></a>
                   </div>
                </div>
             </div>
@@ -249,7 +227,7 @@
                   <p>Build Professional Resumé with proven and ready to use templates. </p>
                   <span class="company-logo"><img src="{{ asset('assets/images/resume-builder.png') }}" alt=""></span>
                   <div class="btn-box text-left">
-                     <a href="#" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Build Your Resue</span></a>
+                     <a href="{{ url('login-page') }}" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Build Your Resue</span></a>
                   </div>
                </div>
             </div>

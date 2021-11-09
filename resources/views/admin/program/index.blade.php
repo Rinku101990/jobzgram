@@ -3,18 +3,18 @@
 
 <!-- [ content ] Start -->
 <div class="container-fluid flex-grow-1 container-p-y">
-    <h4 class="font-weight-bold py-3 mb-0">Course</h4>
+    <h4 class="font-weight-bold py-3 mb-0">Job</h4>
     <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}"><i class="feather icon-home"></i></a></li>
-            <li class="breadcrumb-item">Course</li>
-            <li class="breadcrumb-item active">Course List</li>
+            <li class="breadcrumb-item">Job</li>
+            <li class="breadcrumb-item active">Jobs List</li>
         </ol>
     </div>
 
        <div class="card">
-        <h6 class="card-header bg-dark text-white">Course List
-        <a href="{{url('admin/program/create')}}" class="btn btn-success btn-sm  btn-round float-right" ><i class="feather icon-plus"></i> Add Program</a>
+        <h6 class="card-header bg-dark text-white">Jobs List
+        <a href="{{url('admin/program/create')}}" class="btn btn-success btn-sm  btn-round float-right" ><i class="feather icon-plus"></i> Add Job</a>
         </h6>
              
         <div class="card-datatable table-responsive">
@@ -22,11 +22,8 @@
                 <thead>
                     <tr>
                         <th>Sr. No.</th>
-                        <th>Banner</th>
                         <th>Title</th>
                         <th>Fees</th>
-                        <th>Batch</th>
-                        <th>Rate per session </th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -35,12 +32,9 @@
                     @foreach($program as $key=>$row)
                     <tr class="odd gradeX">
                         <td>{{$key+1}}</td>
-                        <td><img src="{{url('storage/program/'.$row->banner)}}" style="width:250px;"></td>
                         <td>{{$row->title}}</td>
                         <td>{{$row->fees}}</td>
-                        <td>{{@$row->getbatch->name}}</td>
-                        <td>{{@$row->rate_per_session}}</td>
-                        
+                                              
                         <td>  @if($row->status=='active')
                             <span class="badge badge-success">Active</span> 
                         @elseif($row->status=='coming')

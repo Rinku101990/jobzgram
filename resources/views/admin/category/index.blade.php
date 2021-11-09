@@ -3,18 +3,18 @@
 
 <!-- [ content ] Start -->
 <div class="container-fluid flex-grow-1 container-p-y">
-    <h4 class="font-weight-bold py-3 mb-0">Category</h4>
+    <h4 class="font-weight-bold py-3 mb-0">Country</h4>
     <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}"><i class="feather icon-home"></i></a></li>
-            <li class="breadcrumb-item">Category</li>
-            <li class="breadcrumb-item active">Category List</li>
+            <li class="breadcrumb-item">Country</li>
+            <li class="breadcrumb-item active">Country List</li>
         </ol>
     </div>
 
        <div class="card">
-        <h6 class="card-header bg-dark text-white">Category List
-        <a href="{{url('admin/category/create')}}" class="btn btn-success btn-sm  btn-round float-right" ><i class="feather icon-plus"></i> Add Category</a>
+        <h6 class="card-header bg-dark text-white">Country List
+        <a href="{{url('admin/category/create')}}" class="btn btn-success btn-sm  btn-round float-right" ><i class="feather icon-plus"></i> Add Country</a>
         </h6>
              
         <div class="card-datatable table-responsive">
@@ -22,7 +22,7 @@
                 <thead>
                     <tr>
                         <th>Sr. No.</th>
-                        <th>Banner</th>
+                        <th>Flag</th>
                         <th>Title</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -32,7 +32,7 @@
                     @foreach($category as $key=>$row)
                     <tr class="odd gradeX">
                         <td>{{$key+1}}</td>
-                        <td><img src="{{url('storage/category/'.$row->img)}}" style="width:250px;"></td>
+                        <td><img src="{{url('storage/category/'.$row->img)}}" style="width:50px;"></td>
                         <td>{{$row->title}}</td>
                         
                         <td>  @if($row->status=='active')

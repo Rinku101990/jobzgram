@@ -4,17 +4,17 @@
 <!-- [ content ] Start -->
 <!-- [ content ] Start -->
 <div class="container-fluid flex-grow-1 container-p-y">
-        <h4 class="font-weight-bold py-3 mb-0">Add Category</h4>
+        <h4 class="font-weight-bold py-3 mb-0">Add Country</h4>
         <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}"><i class="feather icon-home"></i></a></li>
-                <li class="breadcrumb-item">Category</li>
-                <li class="breadcrumb-item active">Add Category</li>
+                <li class="breadcrumb-item">Country</li>
+                <li class="breadcrumb-item active">Add Country</li>
             </ol>
         </div>
 
         <div class="card mb-4">
-            <h6 class="card-header bg-dark text-white">Category</h6>
+            <h6 class="card-header bg-dark text-white">Country</h6>
             <div class="card-body">
                 <form class="form-horizontal form-label-left" action="{{ url('admin/category') }}" method="post" enctype="multipart/form-data">
                     {!! csrf_field() !!}

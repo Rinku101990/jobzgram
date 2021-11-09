@@ -45,7 +45,9 @@ class PageController extends Controller
     // Home Page 
     public function index()
     {   
-        return view('index');
+        $country = Category::where('status','active')->get(); 
+        $jobs = Program::select('cate_id','title','title_slug','fees','status')->where('status','active')->get();
+        return view('index',compact('jobs','country'));
     }
 
     /*--- Login Register ---*/
@@ -59,6 +61,7 @@ class PageController extends Controller
         return view('register');
     }
 
+    
     // About US 
     public function about()
     {   

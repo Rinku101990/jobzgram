@@ -97,7 +97,7 @@ section:after {
 <div class="login-form">
 
     <form action="{{ route('adminLoginPost') }}" method="post">
-    <center><img src="{{ asset('assets/images/Kids-Fable-logo.png') }}" alt="kids Fable" /></center>
+    <center><img src="{{ asset('assets/img/jobzgram-logo.png') }}" alt="jobzgram" style="height:100px" /></center>
     	{!! csrf_field() !!}
         <h2 class="text-center">Admin Login</h2>
         <hr>

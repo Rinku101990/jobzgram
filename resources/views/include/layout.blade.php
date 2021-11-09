@@ -109,12 +109,12 @@
                                  <h4 class="widget-title">Information</h4>
                                  <div class="widget-content">
                                     <ul class="list">
-                                       <li><a href="#">About Us</a></li>
-                                       <li><a href="#">Contact Us</a></li>
-                                       <li><a href="#">Creeer With Us</a></li>
-                                       <li><a href="#">FAQs</a></li>
-                                       <li><a href="#">Terms & Conditions</a></li>
-                                       <li><a href="#">Privacy Policy</a></li>
+                                       <li><a href="{{ url('login-page') }}">About Us</a></li>
+                                       <li><a href="{{ url('login-page') }}">Contact Us</a></li>
+                                       <li><a href="{{ url('login-page') }}">Creeer With Us</a></li>
+                                       <li><a href="{{ url('login-page') }}">FAQs</a></li>
+                                       <li><a href="{{ url('login-page') }}">Terms & Conditions</a></li>
+                                       <li><a href="{{ url('login-page') }}">Privacy Policy</a></li>
                                     </ul>
                                  </div>
                               </div>
@@ -124,12 +124,12 @@
                                  <h4 class="widget-title">Job Seekers</h4>
                                  <div class="widget-content">
                                     <ul class="list">
-                                       <li><a href="#">Register Now</a></li>
-                                       <li><a href="#">Search Job</a></li>
-                                       <li><a href="#">Login</a></li>
-                                       <li><a href="#">Create Job Alert</a></li>
-                                       <li><a href="#">Report a problem</a></li>
-                                       <li><a href="#">Our Blog</a></li>
+                                       <li><a href="{{ url('login-page') }}">Register Now</a></li>
+                                       <li><a href="{{ url('login-page') }}">Search Job</a></li>
+                                       <li><a href="{{ url('login-page') }}">Login</a></li>
+                                       <li><a href="{{ url('login-page') }}">Create Job Alert</a></li>
+                                       <li><a href="{{ url('login-page') }}">Report a problem</a></li>
+                                       <li><a href="{{ url('login-page') }}">Our Blog</a></li>
                                     </ul>
                                  </div>
                               </div>
@@ -139,12 +139,12 @@
                                  <h4 class="widget-title">Job </h4>
                                  <div class="widget-content">
                                     <ul class="list">
-                                       <li><a href="#">Software and Technology</a></li>
-                                       <li><a href="#">Artificial intelligence & Data Science</a></li>
-                                       <li><a href="#">Management </a></li>
-                                       <li><a href="#">Creativity and Design</a></li>
-                                       <li><a href="#">Emerging Technologies</a></li>
-                                       <li><a href="#">Engeering-non CS</a></li>
+                                       <li><a href="{{ url('login-page') }}">Software and Technology</a></li>
+                                       <li><a href="{{ url('login-page') }}">Artificial intelligence & Data Science</a></li>
+                                       <li><a href="{{ url('login-page') }}">Management </a></li>
+                                       <li><a href="{{ url('login-page') }}">Creativity and Design</a></li>
+                                       <li><a href="{{ url('login-page') }}">Emerging Technologies</a></li>
+                                       <li><a href="{{ url('login-page') }}">Engeering-non CS</a></li>
                                     </ul>
                                  </div>
                               </div>
@@ -154,12 +154,12 @@
                                  <h4 class="widget-title">Browse Job </h4>
                                  <div class="widget-content">
                                     <ul class="list">
-                                       <li><a href="#">Browse ll jobs</a></li>
-                                       <li><a href="#">Premium MBA jobs</a></li>
-                                       <li><a href="#">Premium Engeering Jobs</a></li>
-                                       <li><a href="#">Govt. Jobs </a></li>
-                                       <li><a href="#">International Jobs</a></li>
-                                       <li><a href="#">Jobs in Gulf</a></li>
+                                       <li><a href="{{ url('login-page') }}">Browse ll jobs</a></li>
+                                       <li><a href="{{ url('login-page') }}">Premium MBA jobs</a></li>
+                                       <li><a href="{{ url('login-page') }}">Premium Engeering Jobs</a></li>
+                                       <li><a href="{{ url('login-page') }}">Govt. Jobs </a></li>
+                                       <li><a href="{{ url('login-page') }}">International Jobs</a></li>
+                                       <li><a href="{{ url('login-page') }}">Jobs in Gulf</a></li>
                                     </ul>
                                  </div>
                               </div>

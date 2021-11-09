@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="{{ config('app.name', 'Laravel') }}" />
-    <meta name="keywords" content="{{ config('app.name', 'Laravel') }}">
-    <meta name="author" content="rohitbhardwaj883@gmail.com" />
-    <link rel="shortcut icon" href="{{ url('assets/images/favicon.png') }}" />
+    <meta name="description" content="{{ config('app.name', 'Jobzgram') }}" />
+    <meta name="keywords" content="{{ config('app.name', 'Jobzgram') }}">
+    <meta name="author" content="rinku101990@gmail.com" />
+    <link rel="shortcut icon" href="{{ url('assets/img/favicon.jpg') }}" />
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
@@ -99,61 +99,7 @@
                           
                             <li class="sidenav-item @if((\Request::route()->getName() == 'admin.user.view') || (\Request::route()->getName() == 'admin.user.index')) active @endif">
                                 <a href="{{url('admin/user')}}" class="sidenav-link">
-                                    <div>Manage Parents</div>
-                                </a>
-                            </li>
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'admin.user.teacher') || (\Request::route()->getName() == 'admin.user.teacher.view') || (\Request::route()->getName() == 'batch.index') || (\Request::route()->getName() == 'batch.edit') || (\Request::route()->getName() == 'batch.create') || (\Request::route()->getName() == 'study-material.index') || (\Request::route()->getName() == 'study-material.create') || (\Request::route()->getName() == 'study-material.edit') || (\Request::route()->getName() == 'assign.index') || (\Request::route()->getName() == 'assign.create') || (\Request::route()->getName() == 'assign.edit')) active open @endif" style="">
-                                <a href="javascript:" class="sidenav-link sidenav-toggle">
-                                    <div>Manage Mentor</div>
-                                </a>
-                                <ul class="sidenav-menu @if((\Request::route()->getName() == 'admin.user.teacher') || (\Request::route()->getName() == 'admin.user.teacher.view') || (\Request::route()->getName() == 'batch.index') || (\Request::route()->getName() == 'batch.edit') || (\Request::route()->getName() == 'batch.create') || (\Request::route()->getName() == 'study-material.index') || (\Request::route()->getName() == 'study-material.edit') || (\Request::route()->getName() == 'study-material.create')) active open @endif">
-                                <li class="sidenav-item @if((\Request::route()->getName() == 'admin.user.teacher') || (\Request::route()->getName() == 'admin.user.teacher.view')) active @endif">
-                                <a href="{{url('admin/teacher')}}" class="sidenav-link">
-                                    <div>Teacher List</div>
-                                </a>
-                            </li>   
-                            <!-- <li class="sidenav-item @if((\Request::route()->getName() == 'assign.create') || (\Request::route()->getName() == 'assign.index') || (\Request::route()->getName() == 'assign.edit')) active @endif">
-                                        <a href="{{url('admin/assign')}}" class="sidenav-link ">
-                                            <div>Assign Student</div>
-                                        </a>
-                                    </li>  -->
-                                <li class="sidenav-item @if((\Request::route()->getName() == 'batch.create') || (\Request::route()->getName() == 'batch.index') || (\Request::route()->getName() == 'batch.edit')) active @endif">
-                                        <a href="{{url('admin/batch')}}" class="sidenav-link ">
-                                            <div>Batch List</div>
-                                        </a>
-                                    </li>
-                                    <!-- <li class="sidenav-item @if((\Request::route()->getName() == 'study-material.index') || (\Request::route()->getName() == 'study-material.edit') || (\Request::route()->getName() == 'study-material.create')) active @endif">
-                                        <a href="{{url('admin/study-material')}}" class="sidenav-link">
-                                            <div>Study Material </div>
-                                        </a>
-                                    </li> -->
-                                   
-                                </ul>
-                            </li>
-                           
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'admin.user.counsellors') || (\Request::route()->getName() == 'admin.user.counsellors.view')) active @endif">
-                                <a href="{{url('admin/counsellors')}}" class="sidenav-link">
-                                    <div>Manage Counsellors</div>
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </li>
-
-                    <li class="sidenav-item @if((\Request::route()->getName() == 'tag_category.index') || (\Request::route()->getName() == 'tag_category.create') || (\Request::route()->getName() == 'tag_category.edit') || (\Request::route()->getName() == 'search_tag.index') || (\Request::route()->getName() == 'search_tag.create') || (\Request::route()->getName() == 'search_tag.edit')) active open @endif">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon feather icon-layers"></i>
-                            <div>Tag Category</div>
-                        </a>
-                        <ul class="sidenav-menu">
-                            <li class="sidenav-item @if(\Request::route()->getName() == 'tag_category') active @endif">
-                                <a href="{{url('admin/tag_category')}}" class="sidenav-link">
-                                    <div>Manage Tag Category</div>
-                                </a>
-                            </li>
-                            <li class="sidenav-item @if(\Request::route()->getName() == 'search_tag') active @endif">
-                                <a href="{{url('admin/search_tag')}}" class="sidenav-link">
-                                    <div>Manage Search Tag</div>
+                                    <div>Manage Users</div>
                                 </a>
                             </li>
                         </ul>
@@ -162,12 +108,12 @@
                     <li class="sidenav-item @if((\Request::route()->getName() == 'category.index') || (\Request::route()->getName() == 'category.create') || (\Request::route()->getName() == 'category.edit') || (\Request::route()->getName() == 'session.index') || (\Request::route()->getName() == 'session.edit') || (\Request::route()->getName() == 'session.create')) active open @endif">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon feather icon-layers"></i>
-                            <div>Program Category</div>
+                            <div>Country</div>
                         </a>
                         <ul class="sidenav-menu">
                             <li class="sidenav-item @if(\Request::route()->getName() == 'category') active @endif">
                                 <a href="{{url('admin/category')}}" class="sidenav-link">
-                                    <div>Manage Category</div>
+                                    <div>Manage Country</div>
                                 </a>
                             </li>
                         </ul>
@@ -176,101 +122,20 @@
                     <li class="sidenav-item @if((\Request::route()->getName() == 'program.index') || (\Request::route()->getName() == 'program.create') || (\Request::route()->getName() == 'program.edit') || (\Request::route()->getName() == 'session.index') || (\Request::route()->getName() == 'session.edit') || (\Request::route()->getName() == 'session.create')) active open @endif">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon feather icon-layers"></i>
-                            <div>Course</div>
+                            <div>Jobs</div>
                         </a>
                         <ul class="sidenav-menu">
                             
                             <li class="sidenav-item @if((\Request::route()->getName() == 'program.edit') || (\Request::route()->getName() == 'program.index')) active @endif">
                                 <a href="{{url('admin/program')}}" class="sidenav-link">
-                                    <div>Manage Course</div>
+                                    <div>Manage Jobs</div>
                                 </a>
                             </li>
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'session.index') || (\Request::route()->getName() == 'session.edit') || (\Request::route()->getName() == 'session.create')) active open @endif" style="">
-                                <a href="javascript:" class="sidenav-link sidenav-toggle">
-                                    <div>Manage Session</div>
-                                </a>
-                                <ul class="sidenav-menu @if((\Request::route()->getName() == 'session.index') || (\Request::route()->getName() == 'session.edit') || (\Request::route()->getName() == 'session.create')) active open @endif">
-                                    <li class="sidenav-item @if((\Request::route()->getName() == 'session.index') || (\Request::route()->getName() == 'session.edit') || (\Request::route()->getName() == 'session.create')) active @endif">
-                                        <a href="{{url('admin/session')}}" class="sidenav-link">
-                                            <div>Session List</div>
-                                        </a>
-                                    </li>   
-                                </ul>
-                            </li>
+                            
                         </ul>
                     </li>
-
-                    <li class="sidenav-item @if((\Request::route()->getName() == 'batches.index') || (\Request::route()->getName() == 'batches.create') || (\Request::route()->getName() == 'batches.edit') ) active open @endif">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon feather icon-clipboard"></i>
-                            <div>Batches</div>
-                        </a>
-                        <ul class="sidenav-menu">
-                            
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'batches.edit') || (\Request::route()->getName() == 'batches.index')) active @endif">
-                                <a href="{{url('admin/batches')}}" class="sidenav-link">
-                                    <div>Manage Batches</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <!-- <li class="sidenav-item @if((\Request::route()->getName() == 'course.index') || (\Request::route()->getName() == 'course.create') || (\Request::route()->getName() == 'course.edit')) active open @endif">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon feather icon-clipboard"></i>
-                            <div>Course</div>
-                        </a>
-                        <ul class="sidenav-menu">
-                            <li class="sidenav-item @if(\Request::route()->getName() == 'course.create') active @endif">
-                                <a href="{{url('admin/course/create')}}" class="sidenav-link">
-                                    <div>Add Course</div>
-                                </a>
-                            </li>
-                            
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'course.edit') || (\Request::route()->getName() == 'course.index')) active @endif">
-                                <a href="{{url('admin/course')}}" class="sidenav-link">
-                                    <div>Manage Course</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li> -->
-
-                    <li class="sidenav-item @if((\Request::route()->getName() == 'admin.booking-program')) active open @endif">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon feather icon-book"></i>
-                            <div>Booking Program</div>
-                        </a>
-                        <ul class="sidenav-menu">
-                            <li class="sidenav-item @if(\Request::route()->getName() == 'admin.booking-program') active @endif">
-                                <a href="{{url('admin/booking-program')}}" class="sidenav-link">
-                                    <div>Booking Program</div>
-                                </a>
-                            </li>
-                           
-                        </ul>
-                    </li>
-                    <!-- <li class="sidenav-item @if((\Request::route()->getName() == 'course.index') || (\Request::route()->getName() == 'course.create') || (\Request::route()->getName() == 'course.edit')) active open @endif">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon lnr lnr-book"></i>
-                            <div>Courses</div>
-                        </a>
-                        <ul class="sidenav-menu">
-                            <li class="sidenav-item @if(\Request::route()->getName() == 'course.create') active @endif">
-                                <a href="{{url('admin/course/create')}}" class="sidenav-link">
-                                    <div>Add Course</div>
-                                </a>
-                            </li>
-                            
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'course.edit') || (\Request::route()->getName() == 'course.index')) active @endif">
-                                <a href="{{url('admin/course')}}" class="sidenav-link">
-                                    <div>Manage Course</div>
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </li> -->
                     
-                    <li class="sidenav-item @if((\Request::route()->getName() == 'banner.index') || (\Request::route()->getName() == 'banner.create') || (\Request::route()->getName() == 'banner.edit')) active open @endif">
+                    <!-- <li class="sidenav-item @if((\Request::route()->getName() == 'banner.index') || (\Request::route()->getName() == 'banner.create') || (\Request::route()->getName() == 'banner.edit')) active open @endif">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon feather icon-image"></i>
                             <div>Banners</div>
@@ -289,57 +154,8 @@
                             </li>
                             
                         </ul>
-                    </li>
-                     
-                    <!-- <li class="sidenav-item @if((\Request::route()->getName() == 'week.index') || (\Request::route()->getName() == 'week.create') || (\Request::route()->getName() == 'week.edit')) active open @endif">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon feather icon-calendar"></i>
-                            <div>Weeks</div>
-                        </a>
-                        <ul class="sidenav-menu">
-                            <li class="sidenav-item @if(\Request::route()->getName() == 'week.create') active @endif">
-                                <a href="{{url('admin/week/create')}}" class="sidenav-link">
-                                    <div>Add Week</div>
-                                </a>
-                            </li>
-                            
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'week.edit') || (\Request::route()->getName() == 'week.index')) active @endif">
-                                <a href="{{url('admin/week')}}" class="sidenav-link">
-                                    <div>Manage Weeks</div>
-                                </a>
-                            </li>
-                            
-                        </ul>
                     </li> -->
-                    <li class="sidenav-item @if((\Request::route()->getName() == 'admin.week.slot')) active open @endif">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon feather icon-calendar"></i>
-                            <div>Slots</div>
-                        </a>
-                        <ul class="sidenav-menu">
-                            <li class="sidenav-item @if(\Request::route()->getName() == 'admin.week.slot') active @endif">
-                                <a href="{{url('admin/slot')}}" class="sidenav-link">
-                                    <div>Slot List</div>
-                                </a>
-                            </li>
-                           
-                        </ul>
-                    </li>
-
-                    <li class="sidenav-item @if((\Request::route()->getName() == 'admin.booking-appointment')) active open @endif">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon feather icon-list"></i>
-                            <div>Booking Appointment</div>
-                        </a>
-                        <ul class="sidenav-menu">
-                            <li class="sidenav-item @if(\Request::route()->getName() == 'admin.booking-appointment') active @endif">
-                                <a href="{{url('admin/booking-appointment')}}" class="sidenav-link">
-                                    <div>Booking Appointment</div>
-                                </a>
-                            </li>
-                           
-                        </ul>
-                    </li>
+                     
                     <li class="sidenav-item @if((\Request::route()->getName() == 'page.index') || (\Request::route()->getName() == 'page.create') || (\Request::route()->getName() == 'page.edit')) active open @endif">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon feather icon-file-text"></i>
@@ -419,43 +235,6 @@
                             
                         </ul>
                     </li>
-                    <li class="sidenav-item @if((\Request::route()->getName() == 'parentingwebinar.index') || (\Request::route()->getName() == 'parentingwebinar.create') || (\Request::route()->getName() == 'parentingwebinar.edit') || (\Request::route()->getName() == 'admin.parentingwebinar.information') || (\Request::route()->getName() == 'admin.parentingwebinar.webinar_attended') || (\Request::route()->getName() == 'speaker.edit') || (\Request::route()->getName() == 'speaker.index') || (\Request::route()->getName() == 'speaker.create')) active open @endif">
-                        <a href="javascript:" class="sidenav-link sidenav-toggle">
-                            <i class="sidenav-icon feather icon-grid"></i>
-                            <div>Parenting Webinar</div>
-                        </a>
-                        <ul class="sidenav-menu">
-                            <li class="sidenav-item @if(\Request::route()->getName() == 'parentingwebinar.create') active @endif">
-                                <a href="{{url('admin/parentingwebinar/create')}}" class="sidenav-link">
-                                    <div>Add Parenting Webinar</div>
-                                </a>
-                            </li>
-                            
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'parentingwebinar.edit') || (\Request::route()->getName() == 'parentingwebinar.index')) active @endif">
-                                <a href="{{url('admin/parentingwebinar')}}" class="sidenav-link">
-                                    <div>Manage Parenting Webinar</div>
-                                </a>
-                            </li>
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'admin.parentingwebinar.information')) active @endif">
-                                <a href="{{url('admin/information')}}" class="sidenav-link">
-                                    <div>Parenting Webinar Query</div>
-                                </a>
-                            </li>
-
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'admin.parentingwebinar.webinar_attended')) active @endif">
-                                <a href="{{url('admin/webinar-attended')}}" class="sidenav-link">
-                                    <div>Webinar Attended by user</div>
-                                </a>
-                            </li>
-
-                            <li class="sidenav-item @if((\Request::route()->getName() == 'speaker.edit') || (\Request::route()->getName() == 'speaker.index') || (\Request::route()->getName() == 'speaker.create')) active @endif">
-                                <a href="{{url('admin/speaker')}}" class="sidenav-link">
-                                    <div>Speaker</div>
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </li>
                     <li class="sidenav-item @if((\Request::route()->getName() == 'testimonial.index') || (\Request::route()->getName() == 'testimonial.create') || (\Request::route()->getName() == 'testimonial.edit')) active open @endif">
                         <a href="javascript:" class="sidenav-link sidenav-toggle">
                             <i class="sidenav-icon feather icon-zap"></i>
@@ -487,10 +266,7 @@
                                 <a href="{{url('admin/profile')}}" class="sidenav-link">
                                     <div>My Profile</div>
                                 </a>
-                            </li>
-                            
-                           
-                            
+                            </li>                            
                         </ul>
                     </li>                    
                 </ul>
