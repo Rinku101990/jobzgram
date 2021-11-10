@@ -108,7 +108,7 @@
                   @foreach($country as $cntry)
                   @if($cntry->id==$jobsList->cate_id)
                   <figure class="image" style="width:100%;height:auto;border-radius: 0;">
-                     @if(Storage::disk('public')->exists('/category/'.$cntry->img) && $cntry->img !='')
+                     @if($cntry->img !='')
                         <img src="{{ url('/storage/category/').'/'.$cntry->img}}" alt="{{$cntry->title}}" style="width:236px;height:118px">
                      @else
                         <img src="{{ asset('assets/images/jobss.jpg') }}" alt="{{$cntry->title}}" style="width:236px;height:118px">
